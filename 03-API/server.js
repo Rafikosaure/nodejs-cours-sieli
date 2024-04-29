@@ -9,7 +9,7 @@ import routerUser from './router.user.js'
 const app = express()
 
 // PORT
-const PORT = 8080
+const PORT = env.port || 8080
 
 // DATABASE MONGOOSE
 mongoose
