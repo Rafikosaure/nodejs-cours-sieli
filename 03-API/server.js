@@ -1,4 +1,6 @@
 import express from 'express'
+import mongoose, { mongo } from 'mongoose'
+import { env } from './config.js'
 
 // ROUTES
 import routerUser from './router.user.js'
@@ -8,6 +10,12 @@ const app = express()
 
 // PORT
 const PORT = 8080
+
+// DATABASE MONGOOSE
+mongoose
+    .connect(env.mongoURI, {dbName: 'Utilisateur'})
+    .then(() => console.log("Connexion à Mongoose réussie !"))
+    .catch(error => console.log(error))
 
 // MIDDLEWARE
 app.use(express.json())
