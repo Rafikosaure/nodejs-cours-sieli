@@ -10,6 +10,7 @@ const app = express()
 const PORT = 8080
 
 // MIDDLEWARE
+app.use(express.json())
 
 // MIDDLEWARE TO ROUTE
 app.use("/api/user", routerUser)
