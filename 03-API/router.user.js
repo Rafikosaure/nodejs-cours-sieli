@@ -42,7 +42,7 @@ router.put("/update/:id", (req, res) => {
     const name = req.body.name
     const checkIsExist = data.some(user => user.id == id)
     if (checkIsExist) {
-      let result = data.filter(user => {
+      let result = data.map(user => {
         if (user.id == id) {
           user.name = name
         }
