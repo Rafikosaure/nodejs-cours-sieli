@@ -1,0 +1,12 @@
+{
+  "name": "01-serveur",
+  "version": "1.0.0",
+  "description": "cours nodejs sieli",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "rafik bensadi",
+  "license": "ISC"
+}
