@@ -1,9 +1,12 @@
 import express from 'express'
-import mongoose, { mongo } from 'mongoose'
+import mongoose from 'mongoose'
 import { env } from './config.js'
+import cookieParser from 'cookie-parser'
+import cors from 'cors'
 
 // ROUTES
 import routerUser from './router.user.js'
+import routerMongoUser from './user.js'
 
 // APP
 const app = express()
@@ -19,9 +22,12 @@ mongoose
 
 // MIDDLEWARE
 app.use(express.json())
+app.use(cookieParser())
+app.use(cors())
 
 // MIDDLEWARE TO ROUTE
 app.use("/api/user", routerUser)
+app.use("/api/mongo/user", routerMongoUser)
 
 // LISTEN
 app.listen(PORT, () => {
