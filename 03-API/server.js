@@ -7,6 +7,7 @@ import cors from 'cors'
 // ROUTES
 import routerUser from './router.user.js'
 import routerMongoUser from './user.js'
+import routerArticle from './article.js'
 
 // APP
 const app = express()
@@ -28,6 +29,7 @@ app.use(cors())
 // MIDDLEWARE TO ROUTE
 app.use("/api/user", routerUser)
 app.use("/api/mongo/user", routerMongoUser)
+app.use("/api/article", routerArticle)
 
 // LISTEN
 app.listen(PORT, () => {

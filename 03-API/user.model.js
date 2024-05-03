@@ -3,10 +3,10 @@ import mongooseUniqueValidator from "mongoose-unique-validator";
 
 const userSchema = mongoose.Schema(
     {
-        firstname: { type: String, require: true },
-        picture: { type: String, require: true },
-        email: { type: String, require: true, unique: true },
-        password: { type: String, require: true }
+        firstname: { type: String, required: true },
+        picture: { type: String, required: true },
+        email: { type: String, required: true, unique: true },
+        password: { type: String, required: true }
     },
     {
         timestamps: { createdAt: true }
